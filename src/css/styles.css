@@ -1,2 +1,84 @@
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 1rem; }
-#app { margin: 1rem 0; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f7f9fc;
+  color: #1f2937;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.hero p {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 780px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.legend-scale {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.swatch {
+  width: 2rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.swatch-low {
+  background: rgb(220, 38, 38);
+}
+
+.swatch-mid {
+  background: rgb(120, 120, 80);
+}
+
+.swatch-high {
+  background: rgb(22, 163, 74);
+}
+
+#map {
+  height: 70vh;
+  min-height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #d9e0ea;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.details {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+}
+
+.details h2 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.details p {
+  margin: 0.35rem 0;
+  line-height: 1.5;
+}

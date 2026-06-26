@@ -3,13 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>str-map</title>
+<title>New York Short-Term Rental Rule Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-<h1>str-map</h1>
-<div id="app">Click the button to interact</div>
-<button id="action">Click me</button>
-<script src="src/js/main.js"></script>
+  <main class="page">
+    <header class="hero">
+      <h1>New York County Short-Term Rental Rule Stringency</h1>
+      <p>This map colors New York counties from red to green to show a simplified short-term rental rule stringency index.</p>
+    </header>
+
+    <section class="legend" aria-label="Legend">
+      <span>More permissive</span>
+      <div class="legend-scale">
+        <span class="swatch swatch-low"></span>
+        <span class="swatch swatch-mid"></span>
+        <span class="swatch swatch-high"></span>
+      </div>
+      <span>More restrictive</span>
+    </section>
+
+    <div id="map" aria-label="Map of New York counties"></div>
+    <aside id="details" class="details">
+      <p>Select a county to view its stringency level.</p>
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="src/js/main.js"></script>
 </body>
 </html>
