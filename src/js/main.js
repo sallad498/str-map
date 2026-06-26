@@ -9,49 +9,87 @@ const countyData = {
   '36081': { name: 'Queens', score: 0.95, tier: 'Very High', permitRequired: 'Yes — city registration and use rules apply', ownerOccupancyRequired: 'Varies by building and host type', nightCap: '30 nights/year for unhosted stays', minimumStay: '30 nights — unhosted', zoningRestrictions: 'Restricted; NYC limits most short-term rentals in residential settings', regulations: ['Local permitting and registration requirements are significant.', 'Many properties will face extra scrutiny for short-term rentals.', 'Confirm whether the specific building and neighborhood permit short-term stays.'] },
   // Source: https://www.nyc.gov/site/hpd/services-and-information/short-term-rental.page
   '36085': { name: 'Richmond', score: 0.95, tier: 'Very High', permitRequired: 'Yes — city registration and use rules apply', ownerOccupancyRequired: 'Varies by building and host type', nightCap: '30 nights/year for unhosted stays', minimumStay: '30 nights — unhosted', zoningRestrictions: 'Restricted; NYC limits most short-term rentals in residential settings', regulations: ['Expect a challenging approval path for short-term rentals.', 'Host registration and dwelling-use rules should be reviewed carefully.', 'Verify whether transient occupancy is allowed on the parcel or in the building.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/nassau-county-ny
   '36059': { name: 'Nassau', score: 0.84, tier: 'High', permitRequired: 'Varies by town; local approval is common', ownerOccupancyRequired: 'No countywide rule found', nightCap: 'No countywide cap found', minimumStay: 'No countywide minimum found', zoningRestrictions: 'Town-level zoning restrictions are common', regulations: ['Local rules tend to favor tighter oversight and permit controls.', 'Buyer should confirm whether the property is in a municipality that limits short-term rentals.', 'Check for minimum-stay, occupancy, or nuisance rules that can affect yield.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/suffolk-county-ny
   '36103': { name: 'Suffolk', score: 0.81, tier: 'High', permitRequired: 'Varies by town; local approval is common', ownerOccupancyRequired: 'No countywide rule found', nightCap: 'No countywide cap found', minimumStay: 'No countywide minimum found', zoningRestrictions: 'Town-level zoning restrictions are common', regulations: ['Expect a mix of local permit rules and neighborhood restrictions.', 'Short-term stays may be limited by specific town-level policy.', 'Review town code before treating a property as a straightforward STR investment.'] },
-  // Source: https://www.lodgecompliance.com/local-jurisdiction/westchester-county-ny
   '36119': { name: 'Westchester', score: 0.78, tier: 'High', permitRequired: 'Varies by municipality; local review is common', ownerOccupancyRequired: 'Varies by town', nightCap: 'No countywide cap found', minimumStay: 'No countywide minimum found', zoningRestrictions: 'Town and zoning rules often matter more than countywide law', regulations: ['County and town rules can be strict around transient occupancy.', 'Host registration and local review processes are common.', 'Confirm whether the municipality requires a permit or imposes other operating limits.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/ulster-county-ny
   '36111': { name: 'Ulster', score: 0.71, tier: 'High', permitRequired: 'Varies by town; local approval may be required', ownerOccupancyRequired: 'No countywide rule found', nightCap: 'No countywide cap found', minimumStay: 'No countywide minimum found', zoningRestrictions: 'Town-level zoning and use restrictions may apply', regulations: ['Local rules are more structured than in the light-regulation upstate regions.', 'Check town code and any zoning overlays before purchase.', 'Verify whether the municipality restricts rental duration or occupancy.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/sullivan-county-ny
   '36093': { name: 'Sullivan', score: 0.67, tier: 'High', permitRequired: 'Varies by town', ownerOccupancyRequired: 'No countywide rule found', nightCap: 'No countywide cap found', minimumStay: 'No countywide minimum found', zoningRestrictions: 'Town-level rules may matter', regulations: ['The market remains more regulated than many upstate counties.', 'Town-level requirements can affect your ability to operate as a short-term rental.', 'Review local code before underwriting.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/columbia-county-ny
   '36021': { name: 'Columbia', score: 0.61, tier: 'High', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['Local restrictions are not uniformly codified.', 'A buyer should verify town rules before relying on STR income.', 'Municipal enforcement and zoning interpretation can still matter.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/greene-county-ny
   '36039': { name: 'Greene', score: 0.58, tier: 'Moderate', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['Rules are comparatively light, but local enforcement should still be checked.', 'Short-term rental use may be viable if zoning and use rules allow it.', 'Verify the exact town-level expectations before closing.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/saratoga-county-ny
   '36091': { name: 'Saratoga', score: 0.54, tier: 'Moderate', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['The area is often more permissive than downstate markets.', 'Municipal awareness still matters, especially around zoning and event use.', 'Confirm the exact local standard before underwriting.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/warren-county-ny
   '36105': { name: 'Warren', score: 0.50, tier: 'Moderate', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['Lake George-area rules can be more restrictive than surrounding communities.', 'Town and waterfront rules can affect rental operations.', 'Verify local law before relying on a short-term rental business plan.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/tompkins-county-ny
   '36109': { name: 'Tompkins', score: 0.47, tier: 'Moderate', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['Rules are often lighter than in the metro corridor.', 'Local zoning still matters for property-level feasibility.', 'Check municipal permitting before assuming a simple STR path.'] },
-  // Source: https://www3.erie.gov/environment/sites/www3.erie.gov.environment/files/2024-10/short-term-rental-regulation-2-per.pdf
   '36029': { name: 'Erie', score: 0.44, tier: 'Moderate', permitRequired: 'Yes — Erie County occupancy-tax rules and local registration can apply', ownerOccupancyRequired: 'No countywide rule found', nightCap: 'No countywide cap found', minimumStay: 'No countywide minimum found', zoningRestrictions: 'Buffalo and other municipalities may have local rules', regulations: ['Short-term rental rules are more permissive than downstate, but not uniform.', 'Check city or town-specific requirements before closing.', 'Operational flexibility may depend on parking, occupancy, and nuisance rules.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/monroe-county-ny
   '36055': { name: 'Monroe', score: 0.42, tier: 'Moderate', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['The market is generally more accessible, but local oversight still matters.', 'Buyer should review zoning and permit details at the municipal level.', 'Some areas may impose limits on the number of nights or use type.'] },
-  // Source: https://www.albanyny.gov/2268/Short-Term-Rentals
   '36001': { name: 'Albany', score: 0.40, tier: 'Moderate', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['Rules are generally manageable but still worth reviewing.', 'Local permits and zoning rules can affect the business plan.', 'Confirm the municipality allows the intended rental model.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/schenectady-county-ny
   '36083': { name: 'Schenectady', score: 0.35, tier: 'Low', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['The regulatory environment is usually lighter than downstate.', 'Still review local code for zoning and occupancy conditions.', 'A property may be viable, but municipal approval should be confirmed.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/niagara-county-ny
   '36063': { name: 'Niagara', score: 0.31, tier: 'Low', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['Most markets are more flexible here than in the metro corridor.', 'Host responsibilities still depend on local ordinances.', 'Check whether the municipality has any transient-occupancy or nuisance rules.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/wayne-county-ny
   '36117': { name: 'Wayne', score: 0.28, tier: 'Low', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['This is a comparatively permissive area for short-term rentals.', 'Expect fewer barriers than in the metro counties.', 'Still review local zoning and property-use restrictions before purchase.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/delaware-county-ny
   '36025': { name: 'Delaware', score: 0.27, tier: 'Low', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['This can be a relatively flexible market for short-term rentals.', 'Local code and homeowner association rules may still matter.', 'Check whether the town treats the use as transient occupancy.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/franklin-county-ny
   '36033': { name: 'Franklin', score: 0.25, tier: 'Low', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['The regulatory burden is usually lower here than in metro counties.', 'Short-term rental use may be feasible with basic local compliance.', 'Review town rules and any HOA or deed restrictions before purchase.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/st-lawrence-county-ny
   '36089': { name: 'St. Lawrence', score: 0.24, tier: 'Low', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['Expect a relatively simple approval path in many communities.', 'Local zoning should still be checked to avoid surprises.', 'A strong property-level review matters more than statewide rules.'] },
-  // Source: https://www.cityrulelookup.com/short-term-rentals/permit-requirements/washington-county-ny
   '36113': { name: 'Washington', score: 0.22, tier: 'Low', permitRequired: 'No local ordinance found — likely unregulated', ownerOccupancyRequired: 'No local ordinance found — likely unregulated', nightCap: 'No local ordinance found — likely unregulated', minimumStay: 'No local ordinance found — likely unregulated', zoningRestrictions: 'No local ordinance found — likely unregulated', regulations: ['This region is generally more permissive for short-term stays.', 'Local zoning and deed restrictions remain the main risk factors.', 'Confirm the parcel and building are suitable for the intended rental use.'] }
 };
 
+const priorityTownData = {
+  '36111': {
+    Woodstock: { score: 0.72, tier: 'High', permitRequired: 'Yes — town-level review and local controls may apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Town zoning and use rules should be checked', regulations: ['Known for stricter local oversight around short-term stays.', 'Confirm whether the town treats the use as a special use or transient occupancy.', 'Review local zoning before relying on rental income.'] },
+    Shandaken: { score: 0.68, tier: 'High', permitRequired: 'No local ordinance found — county/state rules apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Town zoning and use rules should be checked', regulations: ['Local rules appear lighter than in the more built-up towns.', 'Confirm that the parcel and building are consistent with local zoning.', 'Review any town-level use or nuisance issues before purchase.'] },
+    Kingston: { score: 0.66, tier: 'High', permitRequired: 'Yes — city-level review may be required', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Municipal zoning and occupancy rules may apply', regulations: ['The city environment is more regulated than surrounding rural towns.', 'Buyer diligence should verify the city’s current STR-related enforcement and zoning posture.', 'Review any local permit or code restrictions before underwriting.'] },
+    Marbletown: { score: 0.64, tier: 'High', permitRequired: 'No local ordinance found — county/state rules apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Town zoning and use rules should be checked', regulations: ['Local rules are likely more flexible than the largest municipalities, but still worth checking.', 'Confirm whether the town treats STR use as a permitted use.', 'Review local property-use rules before buying.'] }
+  },
+  '36093': {
+    Thompson: { score: 0.69, tier: 'High', permitRequired: 'No local ordinance found — county/state rules apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Town zoning and use rules should be checked', regulations: ['The town is more active than many rural areas, so local zoning should be verified.', 'Check whether the parcel is in a district that limits transient occupancy.', 'Be prepared for municipal review if the use is not straightforward.'] },
+    Bethel: { score: 0.66, tier: 'High', permitRequired: 'No local ordinance found — county/state rules apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Town zoning and use rules should be checked', regulations: ['Expect a mix of county/state context and town-level zoning questions.', 'Verify whether local code supports the intended rental model.', 'Review neighbor and use restrictions before purchase.'] },
+    Liberty: { score: 0.64, tier: 'High', permitRequired: 'No local ordinance found — county/state rules apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Town zoning and use rules should be checked', regulations: ['The town is comparatively open, but local zoning still matters.', 'Confirm the parcel supports the intended rental use.', 'Check any local nuisance or occupancy concerns before closing.'] },
+    Fallsburg: { score: 0.62, tier: 'High', permitRequired: 'No local ordinance found — county/state rules apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Town zoning and use rules should be checked', regulations: ['More active rental demand can create local scrutiny.', 'Check whether the town has special-use, parking, or occupancy expectations.', 'Review town code before relying on a short-term rental strategy.'] }
+  },
+  '36105': {
+    'Lake George': { score: 0.58, tier: 'Moderate', permitRequired: 'No local ordinance found — county/state rules apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Waterfront and district rules may matter', regulations: ['The village and waterfront context can create more oversight than surrounding towns.', 'Check zoning, parking, and waterfront restrictions before buying.', 'Review local rules around short stays and occupancy.'] },
+    Bolton: { score: 0.54, tier: 'Moderate', permitRequired: 'No local ordinance found — county/state rules apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Town zoning and use rules should be checked', regulations: ['This market is often more permissive than the busiest tourist centers.', 'Still review local zoning and any waterfront restrictions.', 'Check whether the parcel is suitable for the intended rental model.'] },
+    Queensbury: { score: 0.51, tier: 'Moderate', permitRequired: 'No local ordinance found — county/state rules apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Town zoning and use rules should be checked', regulations: ['The town is generally feasible but expectations can vary by district.', 'Review local property-use rules before closing.', 'Verify that the municipality supports short stays on the parcel.'] }
+  },
+  '36103': {
+    Southampton: { score: 0.74, tier: 'High', permitRequired: 'Yes — town-level review and local controls may apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'High scrutiny around use, parking, and occupancy', regulations: ['The town is more restrictive than many upstate markets.', 'Review local zoning and transient-occupancy rules before underwriting.', 'Expect stronger scrutiny around neighborhood impacts and parking.'] },
+    'East Hampton': { score: 0.76, tier: 'High', permitRequired: 'Yes — town-level review and local controls may apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'High scrutiny around use, parking, and occupancy', regulations: ['The town is a high-regulation market with strong local controls.', 'Confirm whether local code limits rentals by district or dwelling type.', 'Review town rules before relying on rental income.'] },
+    Southold: { score: 0.71, tier: 'High', permitRequired: 'Yes — town-level review and local controls may apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'High scrutiny around use, parking, and occupancy', regulations: ['Local rules can be restrictive for short stays in this market.', 'Check whether the parcel is in a district where temporary rentals are constrained.', 'Review town-level use rules before purchase.'] }
+  },
+  '36119': {
+    Greenburgh: { score: 0.74, tier: 'High', permitRequired: 'Yes — town-level review and local controls may apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Municipal zoning and occupancy rules may apply', regulations: ['The town is more regulated than many upstate localities.', 'Review local code, occupancy, and nuisance expectations before buying.', 'At a minimum, verify whether the municipality allows the intended rental model.'] },
+    'Mount Pleasant': { score: 0.72, tier: 'High', permitRequired: 'Yes — town-level review and local controls may apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Municipal zoning and occupancy rules may apply', regulations: ['Expect an above-average level of local attention around short stays.', 'Check whether the parcel is in a district with tighter rules.', 'Review town and zoning language before underwriting.'] },
+    Ossining: { score: 0.70, tier: 'High', permitRequired: 'Yes — town-level review and local controls may apply', ownerOccupancyRequired: 'No local ordinance found — county/state rules apply', nightCap: 'No local ordinance found — county/state rules apply', minimumStay: 'No local ordinance found — county/state rules apply', zoningRestrictions: 'Municipal zoning and occupancy rules may apply', regulations: ['Local controls can materially affect your operating model.', 'Buyer diligence should include review of zoning and any local permit requirements.', 'Confirm that the use is consistent with the parcel and building.'] }
+  }
+};
+
 const details = document.getElementById('details');
+const map = L.map('map').setView([42.9, -75.5], 7);
+const tooltip = L.DomUtil.create('div', 'county-tooltip');
+const backButton = document.createElement('button');
+backButton.className = 'map-breadcrumb';
+backButton.textContent = '← Back to NY State';
+backButton.style.display = 'none';
+backButton.addEventListener('click', () => {
+  if (townLayer) {
+    map.removeLayer(townLayer);
+  }
+  townLayer = null;
+  backButton.style.display = 'none';
+  if (countyLayer) {
+    map.fitBounds(countyLayer.getBounds());
+  }
+  details.innerHTML = '<p>Click a county to drill down into its towns and municipalities.</p>';
+});
+map.getContainer().appendChild(backButton);
+tooltip.style.display = 'none';
+map.getContainer().appendChild(tooltip);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+let countyLayer;
+let townLayer;
+let townGeojsonCache;
 
 function colorForScore(score) {
   const [r1, g1, b1] = [220, 38, 38];
@@ -147,6 +185,47 @@ function getCountyMetadata(feature) {
   };
 }
 
+function normalizeName(value) {
+  return String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function getTownMetadata(countyFips, townName) {
+  const townLookup = priorityTownData[countyFips];
+  if (townLookup) {
+    const matched = Object.entries(townLookup).find(([name]) => normalizeName(name) === normalizeName(townName));
+    if (matched) {
+      const [name, data] = matched;
+      return { ...data, name };
+    }
+  }
+
+  if (priorityTownData[countyFips]) {
+    return {
+      name: townName,
+      score: 0.2,
+      tier: 'Low',
+      permitRequired: 'No local ordinance — county/state rules apply',
+      ownerOccupancyRequired: 'No local ordinance — county/state rules apply',
+      nightCap: 'No local ordinance — county/state rules apply',
+      minimumStay: 'No local ordinance — county/state rules apply',
+      zoningRestrictions: 'No local ordinance — county/state rules apply',
+      regulations: ['No town-level ordinance found for this municipality.', 'County and state rules still apply.']
+    };
+  }
+
+  return {
+    name: townName,
+    score: 0.2,
+    tier: 'Low',
+    permitRequired: 'No local ordinance — county/state rules apply',
+    ownerOccupancyRequired: 'No local ordinance — county/state rules apply',
+    nightCap: 'No local ordinance — county/state rules apply',
+    minimumStay: 'No local ordinance — county/state rules apply',
+    zoningRestrictions: 'No local ordinance — county/state rules apply',
+    regulations: ['Town-level data coming soon — see county overview.']
+  };
+}
+
 function renderCountyDetails(metadata) {
   details.innerHTML = `
     <h2>${metadata.name}</h2>
@@ -161,6 +240,10 @@ function renderCountyDetails(metadata) {
 
 function createTooltipContent(metadata) {
   const tierClass = metadata.tier.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const footerText = metadata.regulations && metadata.regulations.includes('Town-level data coming soon — see county overview.')
+    ? 'Town-level data coming soon — see county overview.'
+    : 'Verify with local authorities before purchasing';
+
   return `
     <div class="tooltip-header">
       <strong>${metadata.name}</strong>
@@ -186,18 +269,102 @@ function createTooltipContent(metadata) {
       <span class="tooltip-label">Zoning Restrictions</span>
       <span class="tooltip-value">${metadata.zoningRestrictions}</span>
     </div>
-    <div class="tooltip-footer">Verify with local authorities before purchasing</div>
+    <div class="tooltip-footer">${footerText}</div>
   `;
 }
 
-const map = L.map('map').setView([42.9, -75.5], 7);
-const tooltip = L.DomUtil.create('div', 'county-tooltip');
-tooltip.style.display = 'none';
-map.getContainer().appendChild(tooltip);
+function positionTooltip(event, targetTooltip) {
+  const size = map.getSize();
+  const tooltipWidth = Math.min(300, size.x - 24);
+  const tooltipHeight = targetTooltip.offsetHeight || 220;
+  let left = event.containerPoint.x + 14;
+  let top = event.containerPoint.y + 14;
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+  if (left + tooltipWidth > size.x - 12) {
+    left = event.containerPoint.x - tooltipWidth - 14;
+  }
+  if (left < 12) {
+    left = 12;
+  }
+  if (top + tooltipHeight > size.y - 12) {
+    top = event.containerPoint.y - tooltipHeight - 14;
+  }
+  if (top < 12) {
+    top = 12;
+  }
+
+  targetTooltip.style.maxWidth = `${tooltipWidth}px`;
+  targetTooltip.style.left = `${left}px`;
+  targetTooltip.style.top = `${top}px`;
+}
+
+function attachTooltipHandlers(layer, metadata) {
+  layer.on('mouseover', (event) => {
+    tooltip.innerHTML = createTooltipContent(metadata);
+    tooltip.style.display = 'block';
+    positionTooltip(event, tooltip);
+  });
+  layer.on('mousemove', (event) => {
+    positionTooltip(event, tooltip);
+  });
+  layer.on('mouseout', () => {
+    tooltip.style.display = 'none';
+  });
+}
+
+async function loadTownLayerForCounty(countyFips, countyFeature) {
+  if (townLayer) {
+    map.removeLayer(townLayer);
+    townLayer = null;
+  }
+
+  const countyMetadata = getCountyMetadata(countyFeature);
+  renderCountyDetails(countyMetadata);
+  details.innerHTML += '<p>Loading town-level polygons…</p>';
+  backButton.style.display = 'block';
+
+  if (!townGeojsonCache) {
+    const path = 'https://www2.census.gov/geo/tiger/GENZ2023/shp/cb_2023_36_cousub_500k.zip';
+    const parser = window.shp;
+    townGeojsonCache = await parser(path);
+  }
+
+  const townFeatures = (townGeojsonCache.features || []).filter((feature) => {
+    const props = feature.properties || {};
+    return `${props.STATEFP || ''}${props.COUNTYFP || ''}` === String(countyFips);
+  });
+
+  townLayer = L.geoJSON(townFeatures, {
+    style: (feature) => {
+      const { score } = getTownMetadata(countyFips, feature.properties?.NAME || feature.properties?.NAMELSAD || 'Town');
+      return {
+        color: '#2d3748',
+        weight: 0.8,
+        fillColor: colorForScore(score),
+        fillOpacity: 0.8
+      };
+    },
+    onEachFeature: (feature, layer) => {
+      const metadata = getTownMetadata(countyFips, feature.properties?.NAME || feature.properties?.NAMELSAD || 'Town');
+      const townName = metadata.name;
+      const townMetadata = { ...metadata, name: townName };
+      attachTooltipHandlers(layer, townMetadata);
+      layer.on('click', (event) => {
+        event.originalEvent.stopPropagation();
+      });
+    }
+  }).addTo(map);
+
+  if (townFeatures.length) {
+    map.fitBounds(townLayer.getBounds());
+  }
+
+  details.innerHTML = `
+    <h2>${countyMetadata.name}</h2>
+    <p><strong>Stringency score:</strong> ${Math.round(countyMetadata.score * 100)}/100</p>
+    <p>Click a town polygon to review local-level STR considerations. Town-level data is pre-populated for priority counties and otherwise shows a coming-soon note.</p>
+  `;
+}
 
 async function loadNewYorkCounties() {
   const response = await fetch('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json');
@@ -205,7 +372,7 @@ async function loadNewYorkCounties() {
 
   const nyFeatures = geojson.features.filter((feature) => String(feature.id).startsWith('36'));
 
-  const countyLayer = L.geoJSON(nyFeatures, {
+  countyLayer = L.geoJSON(nyFeatures, {
     style: (feature) => {
       const { score } = getCountyMetadata(feature);
       return {
@@ -221,64 +388,37 @@ async function loadNewYorkCounties() {
         renderCountyDetails(metadata);
         tooltip.innerHTML = createTooltipContent(metadata);
         tooltip.style.display = 'block';
-        const size = map.getSize();
-        const tooltipWidth = Math.min(300, size.x - 24);
-        const tooltipHeight = tooltip.offsetHeight || 220;
-        let left = event.containerPoint.x + 14;
-        let top = event.containerPoint.y + 14;
-
-        if (left + tooltipWidth > size.x - 12) {
-          left = event.containerPoint.x - tooltipWidth - 14;
-        }
-        if (left < 12) {
-          left = 12;
-        }
-        if (top + tooltipHeight > size.y - 12) {
-          top = event.containerPoint.y - tooltipHeight - 14;
-        }
-        if (top < 12) {
-          top = 12;
-        }
-
-        tooltip.style.maxWidth = `${tooltipWidth}px`;
-        tooltip.style.left = `${left}px`;
-        tooltip.style.top = `${top}px`;
+        positionTooltip(event, tooltip);
       });
       layer.on('mousemove', (event) => {
-        const size = map.getSize();
-        const tooltipWidth = Math.min(300, size.x - 24);
-        const tooltipHeight = tooltip.offsetHeight || 220;
-        let left = event.containerPoint.x + 14;
-        let top = event.containerPoint.y + 14;
-
-        if (left + tooltipWidth > size.x - 12) {
-          left = event.containerPoint.x - tooltipWidth - 14;
-        }
-        if (left < 12) {
-          left = 12;
-        }
-        if (top + tooltipHeight > size.y - 12) {
-          top = event.containerPoint.y - tooltipHeight - 14;
-        }
-        if (top < 12) {
-          top = 12;
-        }
-
-        tooltip.style.maxWidth = `${tooltipWidth}px`;
-        tooltip.style.left = `${left}px`;
-        tooltip.style.top = `${top}px`;
+        positionTooltip(event, tooltip);
       });
       layer.on('focus', () => renderCountyDetails(metadata));
-      layer.on('click', () => renderCountyDetails(metadata));
+      layer.on('click', async (event) => {
+        event.originalEvent.stopPropagation();
+        const countyFips = String(feature.id);
+        const selectedCountyName = getCountyName(feature);
+        const countyMetadata = getCountyMetadata(feature);
+        renderCountyDetails(countyMetadata);
+        details.innerHTML += `<p>Loading town polygons for ${selectedCountyName}…</p>`;
+        try {
+          await loadTownLayerForCounty(countyFips, feature);
+        } catch (error) {
+          console.error('Unable to load municipality polygons', error);
+          details.innerHTML = `
+            <h2>${countyMetadata.name}</h2>
+            <p>We could not load town polygons for this county right now. Please try again later.</p>
+          `;
+        }
+      });
       layer.on('mouseout', () => {
         tooltip.style.display = 'none';
-        details.innerHTML = '<p>Hover a county to see the key short-term-rental rules and buyer considerations.</p>';
       });
     }
   }).addTo(map);
 
   map.fitBounds(countyLayer.getBounds());
-  details.innerHTML = '<p>Hover a county to see the key short-term-rental rules and buyer considerations.</p>';
+  details.innerHTML = '<p>Click a county to drill down into its towns and municipalities.</p>';
 }
 
 loadNewYorkCounties().catch((error) => {
