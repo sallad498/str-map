@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Woodstock", "countyFips": "36111" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-74.22, 42.03], [-74.16, 42.03], [-74.16, 42.09], [-74.22, 42.09], [-74.22, 42.03]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Shandaken", "countyFips": "36111" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-74.42, 41.98], [-74.36, 41.98], [-74.36, 42.04], [-74.42, 42.04], [-74.42, 41.98]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Kingston", "countyFips": "36111" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-74.06, 41.90], [-74.00, 41.90], [-74.00, 41.96], [-74.06, 41.96], [-74.06, 41.90]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Thompson", "countyFips": "36093" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-74.78, 41.72], [-74.72, 41.72], [-74.72, 41.78], [-74.78, 41.78], [-74.78, 41.72]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Liberty", "countyFips": "36093" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-74.74, 41.80], [-74.68, 41.80], [-74.68, 41.86], [-74.74, 41.86], [-74.74, 41.80]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Fallsburg", "countyFips": "36093" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-74.66, 41.70], [-74.60, 41.70], [-74.60, 41.76], [-74.66, 41.76], [-74.66, 41.70]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Lake George", "countyFips": "36105" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-73.76, 43.42], [-73.70, 43.42], [-73.70, 43.48], [-73.76, 43.48], [-73.76, 43.42]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Bolton", "countyFips": "36105" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-73.68, 43.36], [-73.62, 43.36], [-73.62, 43.42], [-73.68, 43.42], [-73.68, 43.36]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Queensbury", "countyFips": "36105" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-73.62, 43.30], [-73.56, 43.30], [-73.56, 43.36], [-73.62, 43.36], [-73.62, 43.30]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Southampton", "countyFips": "36103" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-72.46, 40.90], [-72.40, 40.90], [-72.40, 40.96], [-72.46, 40.96], [-72.46, 40.90]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "East Hampton", "countyFips": "36103" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-72.24, 41.00], [-72.18, 41.00], [-72.18, 41.06], [-72.24, 41.06], [-72.24, 41.00]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Southold", "countyFips": "36103" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-72.46, 41.08], [-72.40, 41.08], [-72.40, 41.14], [-72.46, 41.14], [-72.46, 41.08]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Greenburgh", "countyFips": "36119" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-73.84, 41.02], [-73.78, 41.02], [-73.78, 41.08], [-73.84, 41.08], [-73.84, 41.02]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Mount Pleasant", "countyFips": "36119" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-73.80, 41.12], [-73.74, 41.12], [-73.74, 41.18], [-73.80, 41.18], [-73.80, 41.12]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "NAME": "Ossining", "countyFips": "36119" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-73.86, 41.16], [-73.80, 41.16], [-73.80, 41.22], [-73.86, 41.22], [-73.86, 41.16]]]
+      }
+    }
+  ]
+}

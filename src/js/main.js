@@ -91,6 +91,14 @@ let countyLayer;
 let townLayer;
 let townGeojsonCache;
 
+async function loadLocalTownGeojson() {
+  const response = await fetch('src/data/priority-town-polygons.geojson');
+  if (!response.ok) {
+    throw new Error(`Unable to load local town data: ${response.status}`);
+  }
+  return response.json();
+}
+
 function colorForScore(score) {
   const [r1, g1, b1] = [220, 38, 38];
   const [r2, g2, b2] = [255, 215, 0];
@@ -324,14 +332,12 @@ async function loadTownLayerForCounty(countyFips, countyFeature) {
   backButton.style.display = 'block';
 
   if (!townGeojsonCache) {
-    const path = 'https://www2.census.gov/geo/tiger/GENZ2023/shp/cb_2023_36_cousub_500k.zip';
-    const parser = window.shp;
-    townGeojsonCache = await parser(path);
+    townGeojsonCache = await loadLocalTownGeojson();
   }
 
   const townFeatures = (townGeojsonCache.features || []).filter((feature) => {
     const props = feature.properties || {};
-    return `${props.STATEFP || ''}${props.COUNTYFP || ''}` === String(countyFips);
+    return String(props.countyFips || props.COUNTYFP || '') === String(countyFips);
   });
 
   townLayer = L.geoJSON(townFeatures, {
